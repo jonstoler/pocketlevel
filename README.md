@@ -1,6 +1,6 @@
 # pocketlevel specification
 
-*version 0.1*
+*version 0.2 - see CHANGELOG.md for more information*
 
 **pocketlevel** is a file format for tile-based level layouts, intended for (but certainly not limited to!) game design.
 
@@ -87,6 +87,10 @@ keys are stored in a file called `key.txt`.
 keys follow the same rules of inheritance as settings - deeper nested keys override other keys.
 
 each key item is defined by a character, followed by an arrow (`->`), followed by its numeric representation. every key item takes up an entire line. whitespace is allowed. multiple characters can map to the same integer.
+
+multiple characters can map to the same integer on a single line by using commas, though this is optional. for instance:
+
+`x, y, z -> 1`
 
 for example, the level:
 
