@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>lvl</string>
+	</array>
+	<key>name</key>
+	<string>PocketLevel</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>#.*$</string>
+			<key>name</key>
+			<string>comment.line.character</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^{objects}$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>markup.heading</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>
+*(?=^{.*}$)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.toml</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^{.*}$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>markup.heading</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>
+*(?=^{.*}$)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\.</string>
+					<key>name</key>
+					<string>comment.line.character</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>#.*$</string>
+					<key>name</key>
+					<string>comment.line.character</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.pocketlevel</string>
+	<key>uuid</key>
+	<string>cd59b0b5-e975-4407-a6bf-6c75c4a6c54c</string>
+</dict>
+</plist>

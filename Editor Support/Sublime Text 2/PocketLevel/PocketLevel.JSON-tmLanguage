@@ -1,0 +1,40 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+{
+	"name": "PocketLevel",
+	"scopeName": "text.pocketlevel",
+	"fileTypes": ["lvl"],
+	"patterns": [
+		{
+			"match": "#.*$",
+			"name": "comment.line.character"
+		},
+		{
+			"begin": "^{objects}$",
+			"beginCaptures": {
+				"0": {"name": "markup.heading"}
+			},
+			"end": "\n*(?=^{.*}$)",
+			"patterns": [
+				{"include": "source.toml"}
+			]
+		},
+		{
+			"begin": "^{.*}$",
+			"beginCaptures": {
+				"0": {"name": "markup.heading"}
+			},
+			"end": "\n*(?=^{.*}$)",
+			"patterns": [
+				{
+					"name": "comment.line.character",
+					"match": "\\."
+				},
+				{
+					"name": "comment.line.character",
+					"match": "#.*$"
+				}
+			]
+		}
+	],
+	"uuid": "cd59b0b5-e975-4407-a6bf-6c75c4a6c54c"
+}
