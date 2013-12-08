@@ -14,7 +14,14 @@ public class PocketLevel
 		NOTE: this is a work-in-progress!
 
 		It's perfectly functional but may require reorganization or refactoring.
+
+		supports up to pocketlevel version 0.1
 	*/
+
+	// this can get a little messy because ActionScript sucks at filesystem
+	// things, so you have to manually load keys and settings
+	// in other words, your game logic has to be aware of the level filestructure,
+	// which sucks, but there's nothing I can do about that :(
 	public function PocketLevel(file:Class = null):void
 	{
 		settings = mergeObjects(_defaults, settings);
