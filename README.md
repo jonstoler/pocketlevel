@@ -45,7 +45,7 @@ the settings would then be as follows:
 
 ````
    rootlvl.lvl -> a = 1, b = 3
-    sublvl.lvl -> a = 1, b = 3, c = 4
+    sublvl.lvl -> a = 2, b = 3, c = 4
 anotherlvl.lvl -> a = 3, b = 3, c = 4
 ````
 
