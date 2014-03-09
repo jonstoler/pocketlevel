@@ -127,5 +127,83 @@ objects provide flexibility for objects that cannot be represented by a simple t
 
 I recommend using [JavE][jave] as an editor. I may eventually write a more specialized editor with pocketlevel-specific features.
 
+---
+
+## full example
+
+the following example has this file structure:
+
+````
+/ [root]
+	settings.txt
+	key.txt
+	world_01/
+		settings.txt
+		key.txt
+		level_01.lvl
+````
+
+#### /settings.txt
+````
+tileWidth = 32
+tileHeight = 32
+````
+
+#### /key.txt
+````
+# empty
+. -> 0
+
+# floor
+x -> 1
+
+# pit
+o -> 2
+
+# exit
+@ -> 3
+
+# start position
++ -> 4
+````
+
+#### /world_01/settings.txt
+````
+tileset = "desert.png"
+````
+
+#### /world_01/key.txt
+````
+# cactus
+& -> 18
+````
+
+#### /world_01/level_01.lvl
+````
+{fg}
+.@xxxx..
+..&..x.&
+&..oxx..
+..oxxxxx
+..oxoo.+
+
+{enemy}
+..xxx...
+....x...
+..xxx...
+....xxx.
+....+...
+
+{settings}
+[level]
+name = "Cactus Catastrophe"
+difficulty = 3
+targetTime = 19.48
+
+[player]
+startingHealth = 4
+ammo = 16
+````
+
 [toml]: https://github.com/mojombo/toml
 [jave]: http://jave.de/
